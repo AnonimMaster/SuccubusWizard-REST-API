@@ -36,10 +36,10 @@ namespace SuccubusWizard_REST_API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<int>> GetServerStatus()
+		public async Task<ActionResult<string>> GetServerStatus()
 		{
 			Incubus incubus = await db.IncubusList.FirstOrDefaultAsync(x => x.Id == 0);
-			return 1;
+			return Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb").ToString();
 		}
 
 
