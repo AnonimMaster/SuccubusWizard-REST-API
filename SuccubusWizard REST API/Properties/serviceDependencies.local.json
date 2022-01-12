@@ -4,7 +4,8 @@
       "type": "secrets.user"
     },
     "mssql1": {
-      "type": "mssql.local",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/succubus/databases/SuccubusSQL",
+      "type": "mssql.azure",
       "connectionId": "ConnectionStrings:DefaultConnection",
       "secretStore": "LocalSecretsFile"
     }

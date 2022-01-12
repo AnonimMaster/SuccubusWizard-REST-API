@@ -39,7 +39,7 @@ namespace SuccubusWizard_REST_API.Controllers
 		public async Task<ActionResult<int>> GetServerStatus()
 		{
 			Incubus incubus = await db.IncubusList.FirstOrDefaultAsync(x => x.Id == 0);
-			return 1;
+			return new ObjectResult(1);
 		}
 
 
